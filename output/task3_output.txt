@@ -1,0 +1,49 @@
+]633;E;{   echo "=== TASK 3 ==="\x3b   echo "--- git branch -a ---"\x3b   git branch -a\x3b   echo "--- git log --graph --all ---"\x3b   git log --oneline --graph --decorate --all\x3b   echo "--- git status ---"\x3b   git status\x3b   echo "--- file.txt (после разрешения конфликта) ---"\x3b   cat file.txt\x3b   echo "--- последний merge-коммит ---"\x3b   git show --stat HEAD\x3b } > output/task3_output.txt;c8a9a342-fc5d-44a0-b0fc-25f806bb124b]633;C=== TASK 3 ===
+--- git branch -a ---
+  featureKartavtsev/branch1
+  featureKartavtsev/branch2
+  featureKartavtsev/new-branch
+  featureKartavtsev/new-feature
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/featureKartavtsev/branch1
+  remotes/origin/featureKartavtsev/branch2
+  remotes/origin/featureKartavtsev/new-branch
+  remotes/origin/featureKartavtsev/new-feature
+  remotes/origin/main
+--- git log --graph --all ---
+*   fb24b3f (HEAD -> main, origin/main, origin/HEAD) Resolve conflict
+|\  
+| * 24578d3 (origin/featureKartavtsev/branch2, featureKartavtsev/branch2) Change 2
+* | bde7fbb (origin/featureKartavtsev/branch1, featureKartavtsev/branch1) Change 1
+|/  
+*   54a71c1 Merge pull request #1 from kkart352/featureKartavtsev/new-feature
+|\  
+| | * d2a9bc7 (origin/featureKartavtsev/new-branch, featureKartavtsev/new-branch) Taks 2 done
+| |/  
+| * c00abf7 (origin/featureKartavtsev/new-feature, featureKartavtsev/new-feature) Add new feature
+| * 0af64db New branch commit
+|/  
+* 566c610 Initial commit
+--- git status ---
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	output/
+
+nothing added to commit but untracked files present (use "git add" to track)
+--- file.txt (после разрешения конфликта) ---
+Change 2!
+Change 1!
+--- последний merge-коммит ---
+commit fb24b3fbc6d6dbd9c0f12f0ece2307fee4d77907
+Merge: bde7fbb 24578d3
+Author: Kartavtsev Konstantin <qyexy352@gmail.com>
+Date:   Wed Sep 23 19:14:51 2026 +0300
+
+    Resolve conflict
+
+ file.txt | 1 +
+ 1 file changed, 1 insertion(+)
