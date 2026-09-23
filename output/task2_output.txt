@@ -1,0 +1,31 @@
+]633;E;{   echo "=== TASK 2 ==="\x3b   echo "--- git branch ---"\x3b   git branch -a\x3b   echo "--- git log ---"\x3b   git log --oneline --graph --decorate --all\x3b   echo "--- git status ---"\x3b   git status\x3b   echo "--- new_feature.txt ---"\x3b   cat new_feature.txt\x3b   echo "--- последний коммит ---"\x3b   git show --stat HEAD\x3b } > output/task2_output.txt;14830cfe-8d53-42b7-a730-da3e9417fa1e]633;C=== TASK 2 ===
+--- git branch ---
+* featureKartavtsev/new-branch
+  featureKartavtsev/new-feature
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/featureKartavtsev/new-branch
+  remotes/origin/featureKartavtsev/new-feature
+  remotes/origin/main
+--- git log ---
+* c00abf7 (HEAD -> featureKartavtsev/new-branch, origin/featureKartavtsev/new-feature, origin/featureKartavtsev/new-branch, featureKartavtsev/new-feature) Add new feature
+* 0af64db New branch commit
+* 566c610 (origin/main, origin/HEAD, main) Initial commit
+--- git status ---
+On branch featureKartavtsev/new-branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	output/
+
+nothing added to commit but untracked files present (use "git add" to track)
+--- new_feature.txt ---
+New feature!
+--- последний коммит ---
+commit c00abf7e49d67083e4f073a46d062bf48c10eb5c
+Author: Картавцев Константин Сергеевич <KSKARTAVTSEV@int.rolfcorp.ru>
+Date:   Tue Sep 22 20:00:44 2026 +0300
+
+    Add new feature
+
+ new_feature.txt | 1 +
+ 1 file changed, 1 insertion(+)
